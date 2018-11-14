@@ -1,0 +1,395 @@
+/* Hide the "NEW" text in the mention bubble */
+[class*="unreadMentionsBar-"] {
+  font-size:0;
+}
+
+/* Add a stripes animation on user profiles */
+@keyframes active-stripes {
+  from {
+    background-position: 40px;
+  }
+  to {
+    background-position: 0px;
+  }
+}
+[class*="userPopout-"] [class*="headerNormal-"], [class*="topSectionNormal-"] [class*="header-"] {
+  background-color: var(--popoutColor);
+  background-image: linear-gradient(45deg, rgba(255, 255, 255, .1) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .1) 50%, rgba(255, 255, 255, .1) 75%, transparent 75%, transparent);
+  background-size: 40px 40px;
+  animation: active-stripes 2s linear infinite;
+}
+
+[class*="userPopout-"] [class*="headerPlaying-"], [class*="topSectionNormal-"] [class*="header-"] {
+  background-color: rgb(114,137,218,0.4);
+  background-image: linear-gradient(45deg, rgba(255, 255, 255, .1) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .1) 50%, rgba(255, 255, 255, .1) 75%, transparent 75%, transparent);
+  background-size: 40px 40px;
+  animation: active-stripes 2s linear infinite;
+}
+
+[class*="userPopout-"] [class*="headerSpotify-"], [class*="topSectionNormal-"] [class*="header-"] {
+  background-color: rgba(29,185,84,0.4);
+  background-image: linear-gradient(45deg, rgba(255, 255, 255, .1) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .1) 50%, rgba(255, 255, 255, .1) 75%, transparent 75%, transparent);
+  background-size: 40px 40px;
+  animation: active-stripes 2s linear infinite;
+}
+
+[class*="userPopout-"] [class*="headerStreaming-"], [class*="topSectionNormal-"] [class*="header-"] {
+  background-color: rgba(89,54,149,0.4);
+  background-image: linear-gradient(45deg, rgba(255, 255, 255, .1) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .1) 50%, rgba(255, 255, 255, .1) 75%, transparent 75%, transparent);
+  background-size: 40px 40px;
+  animation: active-stripes 2s linear infinite;
+}
+
+[class*="userPopout-"] [class*="headerPlaying-"], [class*="bodyNormal"] {
+  border-radius:10px;
+}
+
+/* Set stuff to blue */
+.chat .new-messages-bar, .theme-dark .chat .jump-to-present-bar {
+  background-color: rgba(74,172,240, 0.4);
+}
+
+.chat .new-messages-bar:hover, .theme-dark .chat .jump-to-present-bar:hover {
+  background-color: rgba(74,172,240, 0.7);
+}
+
+[class*="dividerRed"] [class*="dividerContent"] {
+  color: var(--mainColor)!important;
+}
+
+[class*="dividerRed"] [class*="dividerContent"]:before, [class*="dividerRed"] [class*="dividerContent"]:after {
+  border-color: var(--mainColor)!important;
+}
+
+[class*="newMessagesBar"], [class*="mention-"] {
+  background-color: var(--mainColor);
+  animation: badge 2s infinite;
+}
+
+[class*="wrapper-232cHJ"] {
+  background-color: var(--mainColor);
+border-radius: 20%;
+  animation: badge 2s infinite;
+}
+[class*="wrapper-232cHJ"]:hover, [class*="mention-"]:hover {
+  background-color: var(--mainColor);
+animation: none;
+}
+@keyframes badge {
+0% {
+  -moz-box-shadow: 0 0 0 0 rgba(74,172,240, 0.4);
+  box-shadow: 0 0 0 0 rgba(74,172,240, 0.4);
+}
+70% {
+    -moz-box-shadow: 0 0 0 10px rgba(74,172,240, 0);
+    box-shadow: 0 0 0 10px rgba(74,172,240, 0);
+}
+100% {
+    -moz-box-shadow: 0 0 0 0 rgba(74,172,240, 0);
+    box-shadow: 0 0 0 0 rgba(74,172,240, 0);
+}
+}
+
+/* do the member/guild slide thing */
+[class*="membersWrap"] {
+  transition: all var(--transitTime3) ease !important;
+  min-width: 54px;
+  width: 45px;
+}
+
+[class*="membersWrap"]:hover {
+  transition: all var(--transitTime3) ease !important;
+  min-width: 240px;
+  width: 240px;
+}
+
+[class*="guildsWrapper"] {
+  width: 10px!important;
+  transition: all 100ms ease-out;
+  background-color:rgb(0,0,0,0.7)!important;
+}
+
+[class*="guildsWrapper"]:hover {
+  width: 70px!important;
+}
+
+
+/* and we start our glass! */
+/* we set our background first */
+.app, #app-mount {
+  background-image: url("bg.jpg");
+  background-repeat: repeat;
+  background-position: 0px 0px;
+  background-size: cover;
+}
+
+/* and now lets make sure layers dont show up */
+.theme-dark [class*="layer-"], .theme-dark [class*="layers-"]
+ {
+  background: transparent!important;
+  box-shadow: none;
+  border-bottom: 0px solid #fff;
+  border-top: none;
+  opacity: 1;
+}
+
+
+
+
+[class*="layers-"],
+[class*="channels-"] [class*="scroller-"],
+[class*="emojiPicker-"]
+{
+    background: rgba(0, 0, 0, 0.5) !important;
+    background-color: rgba(0, 0, 0, 0.5) !important;
+}
+
+[class*="channels-"],
+[class*="chat-"],
+[class*="messagesWrapper-"],
+[class*="container-"],
+form,
+[class*="standardSidebarView-"],
+[class*="emojiPicker-"] .search-bar,
+[class*="emojiPicker-"] [class*="stickyHeader-"],
+[class*="markup-"] pre .hljs 
+{
+  background-color: rgba(0, 0, 0, 0) !important;
+}
+
+[class*="chat-"] [class*="content-"]:not([class*="contentCozy-"])
+{
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+[class*="markup-"]
+{
+  background-color: rgba(0, 0, 0, 0) !important;
+}
+
+code.inline,
+[class*="channelTextArea-"] [class*="inner-"],
+.search-bar-inner,
+[class*="hasMore"] button,
+[class*="privateChannels-"] > [class*="searchBar-"] > .search-bar,
+.search .search-bar 
+ {
+  background-color: rgba(0, 0, 0, 0.3)!important;
+}
+
+[class*="channels-"] > [class*="container-"]:nth-child(2),
+[class*="channels-"] > [class*="container-"] > [class*="flexChild-"],
+[class*="privateChannels-"] > [class*="searchBar-"],
+[class*="sidebarRegion-"],
+[class*="contentRegion-"],
+[class*="titleWrapper-"] > [class*="title-"],
+[class*="markup-"] pre,
+[class*="membersWrap-"] [class*="members-"]
+{
+  background-color: rgba(0,0,0,0.7)!important;
+  margin:0;
+}
+
+.typing-2GQL18 {
+  visibility: visible;
+  background-color: rgba(0,0,0,0.5)!important;
+  border-radius: 10px;
+  border-left:20px!important;
+  text-align:center;
+}
+
+[class*="titleBar-"] {
+  margin:0;
+  padding-top: 4px;
+  background-color: rgba(0,0,0,0.75)!important;
+}
+[class*="actionRed-"]:before {
+  content: 'well no but \00a0';
+}
+
+[class*="actionRed-"] {
+  text-transform: lowercase;
+}
+
+[class*="actionRed-"]:after {
+  content: '\00a0 \00a0 anyway';
+}
+
+[class*="gatedContent-"] [class*="image-"] {
+  background-image: url(bowsette.png);
+  width:198px;
+  height:252px;
+}
+
+
+/* Set scrollbar */
+::-webkit-scrollbar,
+::-webkit-scrollbar-track,
+::-webkit-scrollbar-track-piece {
+	background: rgba(0,0,0,0.2) !important;
+	box-shadow: none !important;
+	border: none !important;
+	width: 5px !important;
+}
+
+::-webkit-scrollbar-thumb {
+	background: var(--mainColor) !important;
+	width: 5px !important;
+	border: none !important;
+	border-radius: 0px !important;
+}
+
+.theme-dark .friends-table .scroller-wrap::-webkit-scrollbar-thumb,
+.theme-dark .messages-wrapper .scroller-wrap::-webkit-scrollbar-thumb {
+	border: none !important;
+}
+
+.channels-3g2vYe .scroller-fzNley::-webkit-scrollbar {
+	display: none !important;
+}
+
+[class*="membersWrap"] [class*="content-"] {
+  background-color: rgba(0,0,0,0)!important;
+}
+
+[class*="messageGroupBlocked"] {
+  background-color:rgba(0,0,0,0.2)!important;
+}
+
+[class*="channels-"] [class*="containerDefault-"] [class*="wrapperHoveredText-"] [class*="contentHoveredText-"],
+[class*="topSectionNormal-"]
+{
+  background-color:rgba(0,0,0,0.2)!important;
+}
+
+[class*="channels-"] [class*="containerDefault-"] [class*="contentSelectedText-"] {
+  background-color:rgba(0,0,0,0.4)!important;
+}
+
+[class*="userPopout-"] [class*="body-"], [class*="userPopout-"] [class*="footer-"] {
+  background-color:rgba(0,0,0,0.7)!important;
+}
+
+[class*="userPopout-"] [class*="footer-"] input {
+  background-color: rgba(0,0,0,0)!important;
+}
+[class*="modal-"] [class*="inner-"] [class*="body-"]
+{
+  background-color:rgba(0,0,0,0.2)!important;
+}
+
+[class*="mediaBarProgress"] {
+  background-color: var(--mainColor);
+}
+
+
+[class*="inner-"] [class*="modal-"]
+{
+  background-color:rgba(0,0,0,0.2)!important;
+}
+
+
+[class*="contextMenu-"]
+{
+  background-color:rgba(0,0,0,0.6)!important;
+}
+
+[class*="contextMenu-"] [class*="item-"]:hover
+{
+  background-color:rgba(0,0,0,0.2)!important;
+}
+
+
+[class*="popouts-"] > [class*="popout-"] > [class*="container-"] {
+  background-color:rgba(0,0,0,0.5)!important;
+}
+
+
+[class*="resultsGroup-"] > [class*="option-"]::after {
+  display:none;
+}
+
+[class*="popouts-"] > [class*="popout-"] > [class*="container-"] > [class*="focused-"] {
+  background-color:rgba(0,0,0,0.5)!important;
+}
+[class*="resultsGroup-"] > [class*="selected-"],
+[class*="privateChannels-"] [class*="selected-"] a
+{
+  background-color:rgba(0,0,0,0.5)!important;
+}
+
+[class*="markup-"], [class*="username-"] {
+  text-shadow: 2px 2px black;
+}
+
+[class*="messageCozy-"] [class*="headerCozy-"] [class*="avatar-"] [class*="large-"] {
+  box-shadow: 1px 1px 5px #000;
+}
+
+/* Set color for online status */
+[class*="online-"],
+[class*="statusOnline-"] {
+	background: var(--colorFgAccent) !important;
+}
+
+/* Set color for typing */
+[class*="online-"] [class*="typing-"] {
+	background: var(--colorFgAccent) !important;
+}
+
+[class*="idle-"] [class*="typing-"] {
+	background: #faa61a !important;
+}
+
+[class*="dnd-"] [class*="typing-"] {
+	background: #f04747 !important;
+}
+
+[class*="invisible-"] [class*="typing-"] {
+	background: #636b75 !important;
+}
+
+/* Set link color */
+a {
+	color: var(--colorFgAccent);
+}
+
+.theme-dark [class*="markup"] a {
+	color: var(--colorFgAccent) !important;
+}
+
+[class*="dms-"] [class*="guild-"]::before {
+  background-color: var(--mainColor);
+  position:absolute;
+  left:-15px;
+  top:17px;
+  content:'';
+  width:10px;
+  height:10px;
+  border-radius: 5px;
+}
+
+
+.theme-dark [class*="markup"] .mention {
+	color: var(--colorFgAccent) !important;
+}
+
+.theme-dark .isMentioned-N-h9aa {
+	color: var(--colorFg) !important;
+	background: var(--colorMention) !important;
+	box-shadow: rgba(0, 0, 0, 0.4) 0px 4px 25px;
+	border: none;
+	z-index: 1;
+}
+
+.theme-dark .isMentioned-N-h9aa::after {
+	border-left: 4px solid var(--colorFgAccent) !important;
+}
+
+[class*="botTagRegular-"] {
+  border-color: rgba(0,0,0,0.2)!important;
+  background-color: rgba(74,172,240,0.3)!important;
+  border-width:2px;
+  border-style:solid;
+  box-shadow: 1px 1px 5px #000;
+}
