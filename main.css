@@ -162,7 +162,13 @@ form,
     background-color: rgba(0, 0, 0, 0.6);
 }
 
-[class*="markup-"]
+[class*="autocomplete-"] [class*="content-"] {
+  background-color: rgba(0,0,0,0)!important;
+}
+
+[class*="markup-"],
+.search-header,
+.search-results .channel-name
 {
   background-color: rgba(0, 0, 0, 0) !important;
 }
@@ -172,7 +178,8 @@ code.inline,
 .search-bar-inner,
 [class*="hasMore"] button,
 [class*="privateChannels-"] > [class*="searchBar-"] > .search-bar,
-.search .search-bar 
+.search .search-bar,
+.search-result-message
  {
   background-color: rgba(0, 0, 0, 0.3)!important;
 }
@@ -184,7 +191,8 @@ code.inline,
 [class*="contentRegion-"],
 [class*="titleWrapper-"] > [class*="title-"],
 [class*="markup-"] pre,
-[class*="membersWrap-"] [class*="members-"]
+[class*="membersWrap-"] [class*="members-"],
+.search-results-wrap
 {
   background-color: rgba(0,0,0,0.7)!important;
   margin:0;
@@ -305,7 +313,10 @@ code.inline,
 }
 
 
-[class*="resultsGroup-"] > [class*="option-"]::after {
+[class*="resultsGroup-"] > [class*="option-"]::after,
+.search-result::before,
+.search-result::after
+{
   display:none;
 }
 
@@ -392,4 +403,18 @@ a {
   border-width:2px;
   border-style:solid;
   box-shadow: 1px 1px 5px #000;
+}
+.search-result-message {
+  box-shadow: none!important;
+}
+
+.autocomplete-1vrmpx {
+  background-color: rgba(0,0,0,0.7)!important;
+  border-color: rgba(0,0,0,0.8)!important;
+  border-width:1px;
+  border-style:solid;
+}
+
+.selectorSelected-1_M1WV {
+  background-color: rgba(0,0,0,0.4)!important;
 }

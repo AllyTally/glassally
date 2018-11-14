@@ -2,6 +2,7 @@
 @import url("syntaxhighlight.css");
 @import url("main.css");
 
+/* setTimeout(() => { debugger; }, 3000); */
 @font-face {
     font-family: unisansheavy;
     src: url(unisansheavy.woff);
