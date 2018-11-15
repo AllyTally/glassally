@@ -418,3 +418,24 @@ a {
 .selectorSelected-1_M1WV {
   background-color: rgba(0,0,0,0.4)!important;
 }
+
+.headerBar-UHpsPw,
+.gameLibrary-TTDw4Y,
+.header-39GIC8,
+.activityFeed-28jde9,
+.card-7JP0BX,
+.header-1RC2Wb,
+.body-SKIE6r,
+.applicationStore-1pNvnv,
+.itemBackground-1jfD8p,
+#friends {
+background-color: rgba(0,0,0,0.4)!important;
+}
+
+.lookFilled-1Gx00P {
+  background-color: rgba(0,0,0,0.6)!important;
+}
+
+.channel-2QD9_O:hover a {
+  background-color: rgba(0,0,0,0.4)!important;
+}
