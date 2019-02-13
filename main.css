@@ -46,11 +46,11 @@
 
 /* Set stuff to blue */
 .chat .new-messages-bar, .theme-dark .chat .jump-to-present-bar {
-  background-color: rgba(74,172,240, 0.4);
+  background-color: var(--mainColorTrans)
 }
 
 .chat .new-messages-bar:hover, .theme-dark .chat .jump-to-present-bar:hover {
-  background-color: rgba(74,172,240, 0.7);
+  background-color: var(--mainColor)
 }
 
 [class*="dividerRed"] [class*="dividerContent"] {
@@ -62,31 +62,35 @@
 }
 
 [class*="newMessagesBar"], [class*="mention-"] {
-  background-color: var(--mainColor);
+  background-color: var(--colorMention);
   animation: badge 2s infinite;
 }
 
+[class*="newMessagesBar"] button {
+  color: white;
+}
+
 [class*="wrapper-232cHJ"] {
-  background-color: var(--mainColor);
+  background-color: var(--colorMention);
 border-radius: 20%;
   animation: badge 2s infinite;
 }
 [class*="wrapper-232cHJ"]:hover, [class*="mention-"]:hover {
-  background-color: var(--mainColor);
+  background-color: var(--colorMention);
 animation: none;
 }
 @keyframes badge {
 0% {
-  -moz-box-shadow: 0 0 0 0 rgba(74,172,240, 0.4);
-  box-shadow: 0 0 0 0 rgba(74,172,240, 0.4);
+  /*-moz-box-shadow: 0 0 0 0 rgba(74,172,240, 0.4);*/
+  box-shadow: 0 0 0 0 var(--mainColorTrans);
 }
 70% {
-    -moz-box-shadow: 0 0 0 10px rgba(74,172,240, 0);
-    box-shadow: 0 0 0 10px rgba(74,172,240, 0);
+    /*-moz-box-shadow: 0 0 0 10px rgba(74,172,240, 0);*/
+    box-shadow: 0 0 0 10px var(--mainColorInvis);
 }
 100% {
-    -moz-box-shadow: 0 0 0 0 rgba(74,172,240, 0);
-    box-shadow: 0 0 0 0 rgba(74,172,240, 0);
+    /*-moz-box-shadow: 0 0 0 0 rgba(74,172,240, 0);*/
+    box-shadow: 0 0 0 0 var(--mainColorInvis);
 }
 }
 
@@ -117,7 +121,7 @@ animation: none;
 /* and we start our glass! */
 /* we set our background first */
 .app, #app-mount {
-  background-image: url("bg.jpg");
+  background-image: var(--bgImage);
   background-repeat: repeat;
   background-position: 0px 0px;
   background-size: cover;
@@ -142,6 +146,10 @@ animation: none;
 {
     background: rgba(0, 0, 0, 0.5) !important;
     background-color: rgba(0, 0, 0, 0.5) !important;
+}
+
+.emojiPicker-3m1S-j .header-1nkwgG .searchBar-2pWH0_ {
+  background-color: rgba(0,0,0,0.3) !important;
 }
 
 [class*="channels-"],
@@ -184,15 +192,15 @@ code.inline,
   background-color: rgba(0, 0, 0, 0.3)!important;
 }
 
-[class*="channels-"] > [class*="container-"]:nth-child(2),
-[class*="channels-"] > [class*="container-"] > [class*="flexChild-"],
-[class*="privateChannels-"] > [class*="searchBar-"],
-[class*="sidebarRegion-"],
-[class*="contentRegion-"],
-[class*="titleWrapper-"] > [class*="title-"],
-[class*="markup-"] pre,
-[class*="membersWrap-"] [class*="members-"],
-.search-results-wrap
+.theme-dark [class*="channels-"] > [class*="container-"]:nth-child(2),
+.theme-dark [class*="channels-"] > [class*="container-"] > [class*="flexChild-"],
+.theme-dark [class*="privateChannels-"] > [class*="searchBar-"],
+.theme-dark [class*="sidebarRegion-"],
+.theme-dark [class*="contentRegion-"],
+.theme-dark [class*="titleWrapper-"] > [class*="title-"],
+.theme-dark [class*="markup-"] pre,
+.theme-dark [class*="membersWrap-"] [class*="members-"],
+.theme-dark .search-results-wrap
 {
   background-color: rgba(0,0,0,0.7)!important;
   margin:0;
@@ -340,12 +348,12 @@ code.inline,
 /* Set color for online status */
 [class*="online-"],
 [class*="statusOnline-"] {
-	background: var(--colorFgAccent) !important;
+	background: var(--onlineColor) !important;
 }
 
 /* Set color for typing */
 [class*="online-"] [class*="typing-"] {
-	background: var(--colorFgAccent) !important;
+	background: var(--onlineColor) !important;
 }
 
 [class*="idle-"] [class*="typing-"] {
@@ -362,11 +370,11 @@ code.inline,
 
 /* Set link color */
 a {
-	color: var(--colorFgAccent);
+	color: var(--linkColor);
 }
 
 .theme-dark [class*="markup"] a {
-	color: var(--colorFgAccent) !important;
+	color: var(--linkColor) !important;
 }
 
 [class*="dms-"] [class*="guild-"]::before {
@@ -382,19 +390,19 @@ a {
 
 
 .theme-dark [class*="markup"] .mention {
-	color: var(--colorFgAccent) !important;
+	color: var(--mainColor) !important;
 }
 
 .theme-dark .isMentioned-N-h9aa {
 	color: var(--colorFg) !important;
-	background: var(--colorMention) !important;
+	background: var(--colorMentionBg) !important;
 	box-shadow: rgba(0, 0, 0, 0.4) 0px 4px 25px;
 	border: none;
 	z-index: 1;
 }
 
 .theme-dark .isMentioned-N-h9aa::after {
-	border-left: 4px solid var(--colorFgAccent) !important;
+	border-left: 4px solid var(--mainColor) !important;
 }
 
 [class*="botTagRegular-"] {
