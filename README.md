@@ -1,6 +1,8 @@
 # glassally
 smol glass theme 4 discord
 
+dm Ally 🍦#1540 if u have questions
+
 installation:
 
 use any discord client mod [(id recommend discordinjections)](https://github.com/DiscordInjections/DiscordInjections)
