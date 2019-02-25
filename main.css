@@ -390,7 +390,7 @@ a {
 
 
 .theme-dark [class*="markup"] .mention {
-	color: var(--mainColor) !important;
+	color: var(--mainColor) ;
 }
 
 .theme-dark .isMentioned-N-h9aa {
