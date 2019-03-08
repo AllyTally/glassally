@@ -14,7 +14,7 @@
     color:white;
     height:50px;
     width:200px;
-    background-color: var(--colorFgAccent);
+    background-color: var(--mainColor);
 	opacity:1!important;
     position: fixed;
     top: 450px;

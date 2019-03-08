@@ -1,7 +1,16 @@
 @import url("lightblock.css");
 @import url("syntaxhighlight.css");
 @import url("main.css");
+/*@import url('https://fonts.googleapis.com/css?family=Poppins:300');
 
+[class*="name-"] {
+    font-family:"Poppins", "Whitney", "Helvetica Neue", Helvetica, Arial, sans-serif!important;
+    font-size:15px;
+}*/
+/*[class*="markup-"] {
+    font-family:"Poppins", "Whitney", "Helvetica Neue", Helvetica, Arial, sans-serif!important;
+    font-size:13px;
+}*/
 :root {
     --bgImage: url("bg.jpg"); /* Change this to whatever image you'd like as a background */
 	--colorFg: #fff;
@@ -60,7 +69,6 @@
     font-weight:700;
     src:url(whitney700.woff)
 }
-
 /*
 .flexChild-faoVW3:nth-of-type(2) div:nth-of-type(2) div {
     display:none;
@@ -97,3 +105,23 @@ div:has(> .image-33JSyf[style*="155651120344203265"]) {
     top: 6px;
     text-align: center;
 }
+
+.wrapper-1Rf91z {
+    width: 10px!important;
+    transition: all 100ms ease-out;
+    background-color:rgb(0,0,0,0.7)!important;
+  }
+  .wrapper-1Rf91z:hover {
+    width: 70px!important;
+  }
+
+/*  .wrapper-1Rf91z .wrapper-2lTRaf .wrapper-2F3Zv8::before {
+    background-color: var(--mainColor);
+    position:absolute;
+    left:-15px;
+    top:17px;
+    content:'';
+    width:10px;
+    height:10px;
+    border-radius: 5px;
+  }*/

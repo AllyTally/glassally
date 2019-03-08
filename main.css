@@ -107,14 +107,17 @@ animation: none;
   width: 240px;
 }
 
-[class*="guildsWrapper"] {
-  width: 10px!important;
-  transition: all 100ms ease-out;
-  background-color:rgb(0,0,0,0.7)!important;
+[class*="membersWrap"] [class*="membersGroup-"] {
+  color:rgba(0,0,0,0)!important;
+  transition: all var(--transitTime3) ease !important;
+  padding-top: 10px;
+  height:10px;
 }
 
-[class*="guildsWrapper"]:hover {
-  width: 70px!important;
+[class*="membersWrap"]:hover [class*="membersGroup-"] {
+  color:#99aab5!important;
+  height: 40px;
+  padding-top: 20px;
 }
 
 
@@ -375,17 +378,6 @@ a {
 
 .theme-dark [class*="markup"] a {
 	color: var(--linkColor) !important;
-}
-
-[class*="dms-"] [class*="guild-"]::before {
-  background-color: var(--mainColor);
-  position:absolute;
-  left:-15px;
-  top:17px;
-  content:'';
-  width:10px;
-  height:10px;
-  border-radius: 5px;
 }
 
 
